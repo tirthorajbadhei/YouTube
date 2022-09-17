@@ -1,0 +1,111 @@
+#container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  justify-content: space-between;
+  margin-top: 140px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+}
+img {
+  width: 90%;
+}
+body {
+  margin: 0px;
+  background-color: #0a0a0a;
+}
+#header {
+  background-color: #202020;
+
+  height: 100px;
+  display: flex;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+}
+#header img {
+  width: 40px;
+  height: 40px;
+  border-radius: 30px;
+  margin-top: 20px;
+  margin-left: 470px;
+  cursor: pointer;
+  transition-duration: 500ms;
+}
+#header img:hover {
+  transform: scale(1.2);
+  box-shadow: 3px 3px 20px rgb(128, 127, 127);
+}
+input {
+  width: 450px;
+  background-color: #121212;
+  color: white;
+  height: 30px;
+  border-radius: 5px;
+  border: 1px solid #121212;
+  margin-left: 350px;
+  margin-top: 20px;
+}
+button {
+  background-color: #313131;
+  color: white;
+
+  width: 90px;
+  height: 40px;
+  border-radius: 10px;
+  margin-top: 17px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  transition-duration: 300ms;
+}
+button:hover {
+  transform: scale(1.05);
+  background-color: #3a3939;
+  cursor: pointer;
+
+  transform: rotate(2deg);
+  box-shadow: 3px 3px 20px rgb(83, 83, 83);
+}
+#container > div {
+  transition-duration: 1200ms;
+}
+
+#container > div:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+i {
+  transition: 600ms;
+}
+i:hover {
+  transform: scale(1.1);
+}
+@media all and (max-width: 767px) {
+  #container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #header > i {
+    width: 50px;
+  }
+  input {
+    width: 170px;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  }
+  #header {
+    width: auto;
+    height: auto;
+    /* display: flex;
+      flex-wrap: wrap; */
+  }
+  #header > button {
+    width: 100px;
+    margin-left: 10px;
+  }
+}

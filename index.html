@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YouTube</title>
+    <link rel="stylesheet" href="/index.css" />
+    <style></style>
+    <script
+      src="https://kit.fontawesome.com/c2edd81e34.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div id="header">
+      <i
+        style="
+          color: red;
+          font-size: 30px;
+          margin-top: 20px;
+          margin-left: 20px;
+          cursor: pointer;
+        "
+        class="fa-brands fa-youtube"
+        ><span
+          style="
+            color: white;
+            font-size: 25px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont,
+              'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+              'Helvetica Neue', sans-serif;
+            font-weight: bold;
+            cursor: pointer;
+          "
+        >
+          YouTube</span
+        ></i
+      >
+
+      <input type="text" id="query" />
+      <button onclick="search()">Search</button>
+
+      <img
+        src="https://yt3.ggpht.com/yti/AJo0G0lUK4EwehGYcxUAoqhRntLINWay9SVxMIOY45mX0w=s88-c-k-c0x00ffffff-no-rj-mo"
+        alt=""
+      />
+    </div>
+
+    <button
+      style="width: 100px; height: 40px; margin-top: 100px"
+      onclick="view()"
+    >
+      Sort by View
+    </button>
+
+    <button
+      style="width: 100px; height: 40px; margin-top: 100px"
+      onclick="alpha()"
+    >
+      Sort by title
+    </button>
+    <button
+      style="width: 100px; height: 40px; margin-top: 100px"
+      onclick="rating()"
+    >
+      By Rating
+    </button>
+
+    <div id="container"></div>
+  </body>
+</html>
+<script src="/index.js"></script>
