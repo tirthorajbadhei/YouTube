@@ -39,6 +39,7 @@ body {
 #header img:hover {
   transform: scale(1.2);
   box-shadow: 3px 3px 20px rgb(128, 127, 127);
+  animation: vertical.9s linear infinite;
 }
 input {
   width: 450px;
@@ -69,6 +70,7 @@ button:hover {
 
   transform: rotate(2deg);
   box-shadow: 3px 3px 20px rgb(83, 83, 83);
+  animation: vertical.9s linear infinite;
 }
 #container > div {
   transition-duration: 1200ms;
@@ -83,6 +85,60 @@ i {
 }
 i:hover {
   transform: scale(1.1);
+  animation: horizontal.9s linear infinite;
+}
+.hidden {
+  opacity: 0;
+  filter: blur(50px);
+  transform: translateX(-100%);
+  transition: all 1.5s;
+}
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+@keyframes vertical {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+  30% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+  40% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+  65% {
+    transform: scale3d(0.85, 1.15, 1);
+  }
+  75% {
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    transform: scale3d(0.95, 1.05, 1);
+  }
+}
+@keyframes horizontal {
+  0%,
+  100% {
+    transform: translateX(0);
+    transform-origin: 50%, 50%;
+  }
+  15% {
+    transform: translateX(-30px) rotate(6deg);
+  }
+  30% {
+    transform: translateX(15px) rotate(-6deg);
+  }
+  45% {
+    transform: translateX(-15px) rotate(3.6deg);
+  }
+  60% {
+    transform: translateX(9px) rotate(-2.4deg);
+  }
+  75% {
+    transform: translateX(-6px) rotate(1.2deg);
+  }
 }
 @media all and (max-width: 767px) {
   #container {

@@ -102,6 +102,7 @@ const appedVideos = (acutal_data) => {
     };
 
     const div = document.createElement("div");
+
     div.addEventListener("click", function () {
       storeClick(data);
     });
@@ -120,3 +121,14 @@ let storeClick = (data) => {
   localStorage.setItem("clicked_item", JSON.stringify(data));
   document.location.href = "Youtube2.html";
 };
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    } else {
+      entry.target.classList.remove("show");
+    }
+  });
+});
+const hiddenElements = document.querySelectorAll(".hidden");
+hiddenElements.forEach((el) => observer.observe(el));
