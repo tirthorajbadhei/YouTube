@@ -1,5 +1,24 @@
 const API_KEY = `AIzaSyBi4L3gWvMeyUsZwRwfWYfX-Hs2TlPHCjs`;
 
+document.getElementById("query").addEventListener("keypress", async (event) => {
+  if (event.key == "Enter") {
+    event.preventDefault();
+    try {
+      const query = document.getElementById("query").value;
+
+      const res = await fetch(
+        `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&q=${query}&key=${API_KEY}`
+      );
+      const data = await res.json();
+      const acutal_data = data.items;
+      appedVideos(acutal_data);
+      console.log(acutal_data);
+    } catch (err) {
+      console.log(err);
+    }
+  }
+});
+
 const search = async () => {
   // "https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=surfing&key=[YOUR_API_KEY]";
 
